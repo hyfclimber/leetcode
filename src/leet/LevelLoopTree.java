@@ -14,11 +14,13 @@ public class LevelLoopTree {
 	
 	public List<List<Integer>> levelOrder(TreeNode root) {
 		List<List<Integer>> ans = new ArrayList<>();
+		if (root == null) return ans; //判空很重要
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
         while (!queue.isEmpty()) {
             ArrayList<Integer> level = new ArrayList<Integer>();
-            for (int i = 0; i < queue.size(); i++) {
+            int size = queue.size();//要把size定住，不然随着offer子节点会变。
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 level.add(node.val);
                 if (node.left != null) {
