@@ -54,7 +54,7 @@ public class NextGreaterNum {
 
     }
 	
-	//栈+哈希。时间复杂度为:O(M+NLog(N))
+	//栈+哈希。时间复杂度为:O(M+N)
 	public static int[] nextGreaterElement1(int[] nums1, int[] nums2) {
 		int M = nums1.length;
 		int N = nums2.length;
@@ -69,7 +69,6 @@ public class NextGreaterNum {
 			}
 			stack.add(nums2[i]);
 		}
-		
 		for (int i = 0; i < M; i++) {
 			ans[i] = map.getOrDefault(nums1[i], -1);
 		}
