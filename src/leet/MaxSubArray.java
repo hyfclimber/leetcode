@@ -13,7 +13,7 @@ public class MaxSubArray {
 //	-100 <= arr[i] <= 100
 	
 	public static void main(String[] args) {
-		int[] test = {-2,1,-3,4};
+		int[] test = {-2,1,-3,4,-1,2,1,-5,4};
 		System.out.println(maxSubArray(test));
 	}
 	
